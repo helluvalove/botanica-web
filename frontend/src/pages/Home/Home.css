@@ -1,0 +1,213 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Герой секция */
+.hero {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+  color: white;
+  padding: clamp(4rem, 10vw, 8rem) 5%;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  opacity: 0.95;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: white;
+  color: #2E7D32;
+  border: none;
+  padding: clamp(1rem, 2.5vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+  border-radius: 12px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: clamp(180px, 25vw, 250px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 3px solid white;
+  padding: clamp(1rem, 2.5vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+  border-radius: 12px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: clamp(180px, 25vw, 250px);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #2E7D32;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Секция преимуществ */
+.features {
+  padding: clamp(4rem, 8vw, 6rem) 5%;
+  background: #f8f9fa;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  color: #2E7D32;
+  font-weight: 700;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: 100%;
+}
+
+.feature-card {
+  background: white;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2rem);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: clamp(3rem, 6vw, 4rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  color: #2E7D32;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  flex: 1;
+}
+
+/* Секция призыва к действию */
+.cta-section {
+  padding: clamp(4rem, 8vw, 6rem) 5%;
+  background: white;
+  text-align: center;
+  width: 100%;
+}
+
+.cta-section h2 {
+  color: #2E7D32;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 70vh;
+    padding: 3rem 5%;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Очень большие экраны */
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1800px;
+  }
+  
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+  
+  .feature-card {
+    padding: 4rem 3rem;
+  }
+}

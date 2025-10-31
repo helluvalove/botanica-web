@@ -1,0 +1,101 @@
+.header {
+  background: #2E7D32;
+  color: white;
+  padding: 0.6rem 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease; /* ← добавляем плавный переход */
+}
+
+.logo:hover {
+  color: #E8F5E8; /* ← цвет при наведении (светло-зеленый) */
+  transform: translateY(-2px); /* ← легкий подъем */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: bold;
+  line-height: 1;
+  transition: inherit; /* наследует переход от .logo */
+}
+
+.logo span {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  opacity: 0.9;
+  margin-top: 0.2rem;
+  transition: inherit; /* наследует переход от .logo */
+}
+
+.nav {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem clamp(0.8rem, 2vw, 1.5rem);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background: rgba(255,255,255,0.25);
+  font-weight: 600;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 5%;
+  }
+  
+  .logo {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  
+  .nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
