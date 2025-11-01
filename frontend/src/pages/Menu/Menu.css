@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   background: #fff;
+  overflow: hidden; /* ← Важно! */
 }
 
 .menu-header {
@@ -11,6 +12,7 @@
   z-index: 10;
   position: sticky;
   top: 0;
+  flex-shrink: 0; /* ← Чтобы header не сжимался */
 }
 
 .menu-title {
@@ -61,8 +63,10 @@
   flex: 1;
   overflow-y: auto;
   padding: 0 16px;
+  height: 0; /* ← Решает проблему двойного скролла */
 }
 
+/* Остальной CSS без изменений */
 .category-section {
   margin-bottom: 30px;
 }
